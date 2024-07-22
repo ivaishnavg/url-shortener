@@ -10,7 +10,7 @@ async function handelCreateNewShortUrl(req, res){
         shortId : shortId,
         redirectedUrl : body.url,
         visitedHistory :[],
-        createdBy : req.user.id,
+        createdBy : req.user._id,
     })
 
     return res.render("home",{id :shortId })
